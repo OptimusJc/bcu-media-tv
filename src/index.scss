@@ -23,5 +23,11 @@ $clr--gold-200: #F2B705;
 
 $clr--black: #232226; 
 
+// socials colors 
+$facebook--blue: #3d5b94;
+$twitter--blue: #3dacdd;
+$youtube--red: #FF0000;
+
 
 @import "../src/components/Header/header";
+@import "../src/components/Footer/footer";
