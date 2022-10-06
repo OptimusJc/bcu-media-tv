@@ -1,0 +1,27 @@
+// body {
+//   margin: 0;
+//   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+//     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+//     sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// code {
+//   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+//     monospace;
+// }
+
+// COLORS 
+$clr--blue-800: #010440;
+$clr--blue-600: #020873;
+$clr--blue-400: #030BA6;
+$clr--blue-200: #0511F2;
+
+$clr--gold-400: #BF8A49;
+$clr--gold-200: #F2B705;
+
+$clr--black: #232226; 
+
+
+@import "../src/components/Header/header";

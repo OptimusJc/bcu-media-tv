@@ -1,0 +1,22 @@
+.navbar {
+    .navbar-brand img {
+        width: auto;
+        height: 80px;
+    }
+    
+    @media(min-width: 64em) {
+        .navbar-brand img {
+            height: 100px;
+        }
+        
+        .navbar-collapse {
+            .navbar-nav {
+                outline: 2px solid $clr--gold-400;
+                
+                .nav-link {
+                    padding-inline: max(1rem, 1.5rem);
+                }
+            }
+        }
+    }
+}
