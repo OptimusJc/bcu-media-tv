@@ -3,6 +3,38 @@
         width: auto;
         height: 80px;
     }
+
+    .navbar-toggler {
+        &:focus {
+            box-shadow: none;
+        }
+
+        svg {
+            color: $clr--gold-200;
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .navbar-collapse {
+        padding-inline: 1rem;
+
+        .navbar-nav .nav-link {
+                color: #fff;
+
+                &:last-child {
+                    color: $clr--gold-400;
+                    
+                    &:hover {
+                        color: $clr--blue-400;
+                    }
+                }
+
+                &:hover {
+                    color: $clr--gold-200;
+                }
+        }
+    }
     
     @media(min-width: 64em) {
         .navbar-brand img {
@@ -15,6 +47,11 @@
                 
                 .nav-link {
                     padding-inline: max(1rem, 1.5rem);
+
+                    &:last-child {
+                        background: $clr--gold-400;
+                        color: #fff;
+                    }
                 }
             }
         }

@@ -1,4 +1,5 @@
-import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Container, Navbar, Nav } from "react-bootstrap";
+import { HiOutlineMenuAlt4 } from "react-icons/hi";
 
 import bcu_logo from "../../assets/bcu_tv_logo.png";
 
@@ -9,7 +10,9 @@ const Header = () => {
 				<Navbar.Brand href="#home">
 					<img src={bcu_logo} alt="Navbar brand" />
 				</Navbar.Brand>
-				<Navbar.Toggle aria-controls="basic-navbar-nav" />
+				<Navbar.Toggle aria-controls="basic-navbar-nav">
+					<HiOutlineMenuAlt4 />
+				</Navbar.Toggle>
 
 				<Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
 					<Nav>
