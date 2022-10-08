@@ -9,11 +9,11 @@ import Footer from "./components/Footer/Footer";
 
 const App = () => {
 	return (
-		<Container fluid>
+		<div>
 			<Header />
 			<Outlet />
 			<Footer />
-		</Container>
+		</div>
 	);
 };
 

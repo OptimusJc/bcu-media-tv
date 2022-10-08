@@ -1,17 +1,3 @@
-// body {
-//   margin: 0;
-//   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-//     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-//     sans-serif;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-// }
-
-// code {
-//   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-//     monospace;
-// }
-
 // COLORS 
 $clr--blue-800: #010440;
 $clr--blue-600: #020873;
@@ -21,13 +7,29 @@ $clr--blue-200: #0511F2;
 $clr--gold-400: #BF8A49;
 $clr--gold-200: #F2B705;
 
-$clr--black: #232226; 
+$clr--black: #232226;
 
 // socials colors 
 $facebook--blue: #3d5b94;
 $twitter--blue: #3dacdd;
 $youtube--red: #FF0000;
 
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
 
 @import "../src/components/Header/header";
 @import "../src/components/Footer/footer";
+@import "../src/containers/home/home";
+
+
