@@ -1,0 +1,124 @@
+section.home {
+    background: $clr--black;
+
+    img {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .col {
+        z-index: 2;
+
+        .hero_container {
+            margin-block: 2rem;
+
+            .hero_title {
+                color: $clr--gold-400;
+
+                h1 {
+                    width: 350px;
+                    font-weight: bold;
+                }
+
+                button.btn-warning {
+                    margin-block: 1rem;
+                    background: $clr--gold-400;
+                    border: none;
+                    border-radius: 2px;
+                    padding: 0.5rem 1.5rem;
+                    color: $clr--blue-400;
+                }
+            }
+        }
+        .hero_video {
+            margin-block: 2rem;
+        }
+    }
+
+    @media(min-width: 48em) {
+        img {
+            height: 500px;
+        }
+        .col {
+            .hero_container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .hero_title {
+                    width: 350px;
+
+                    h1 {
+                        width: 300px;
+                        font-size: 1.8rem;
+                    }
+                }
+
+                .hero_video > div {
+                    width: 420px !important;
+                    height: 250px !important;
+                }
+            }
+        }
+    }
+
+    @media(min-width: 64em) {
+        img {
+            height: 650px;
+        }
+
+        .col {
+            .hero_container {
+                justify-content: space-around;
+
+                .hero_title {
+                    width: 450px;
+
+
+                    h1 {
+                        width: 450px;
+                        font-size: 2.7rem;
+                    }
+                }
+
+                .hero_video > div {
+                    width: 600px !important;
+                    height: 350px !important;
+                }
+            }
+        }
+    }
+
+    @media(min-width: 86em) {
+        img {
+            height: 840px;
+        }
+
+        .col {
+            .hero_container {
+                .hero_title {
+                    width: 650px;
+
+                    h1 {
+                        width: 650px;
+                        font-size: 3.5rem;
+                    }
+
+                    button.btn-warning {
+                        padding: 0.8rem 2.5rem;
+                    }
+                }
+
+                .hero_video > div {
+                    width: 900px !important;
+                    height: 510px !important;
+                }
+            }
+        }
+    }
+}
