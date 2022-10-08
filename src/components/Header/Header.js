@@ -5,7 +5,7 @@ import bcu_logo from "../../assets/bcu_tv_logo.png";
 
 const Header = () => {
 	return (
-		<Navbar expand="lg">
+		<Navbar expand="md">
 			<Container fluid>
 				<Navbar.Brand href="#home">
 					<img src={bcu_logo} alt="Navbar brand" />

@@ -1,4 +1,6 @@
 .navbar {
+    z-index: 2;
+    
     .navbar-brand img {
         width: auto;
         height: 80px;
@@ -35,6 +37,25 @@
                 }
         }
     }
+
+    @media(min-width: 48em) {
+        .navbar-collapse {
+            .navbar-nav {
+                outline: 2px solid $clr--gold-400;
+                
+                .nav-link {
+                    padding-inline: 0.8rem;
+                    font-size: 0.9rem;
+
+                    &:last-child {
+                        background: $clr--gold-400;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+    }
     
     @media(min-width: 64em) {
         .navbar-brand img {
@@ -42,17 +63,9 @@
         }
         
         .navbar-collapse {
-            .navbar-nav {
-                outline: 2px solid $clr--gold-400;
-                
-                .nav-link {
+            .navbar-nav .nav-link {
                     padding-inline: max(1rem, 1.5rem);
-
-                    &:last-child {
-                        background: $clr--gold-400;
-                        color: #fff;
-                    }
-                }
+                    font-size: 1rem;
             }
         }
     }
