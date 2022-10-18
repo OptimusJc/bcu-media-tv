@@ -1,0 +1,5 @@
+.progress_bar {
+    height: 5px;
+    background-color: var(--purple-shade-3);
+    margin-top: 20px;
+}
