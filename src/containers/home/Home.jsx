@@ -1,10 +1,13 @@
 import { Container, Row, Col } from "react-bootstrap";
 import backgroundImage from "../../assets/home_background.png";
-
 import ReactPlayer from "react-player/lazy";
+import NetflixSlider from "../../components/NetflixSlider";
+
+import useFirestore from "../../hooks/useFirestore";
 
 const Home = () => {
-	const VIDEO_URL = "https://www.youtube.com/watch?v=p49ifHvi25A&t=137s";
+	// const VIDEO_URL = "https://www.youtube.com/watch?v=p49ifHvi25A&t=137s";
+	const homeVideo = useFirestore("videos/landingPage/landingPage_videos");
 
 	return (
 		<section className="home">
@@ -15,23 +18,29 @@ const Home = () => {
 						<div className="hero_container">
 							<div className="hero_title">
 								<span></span>
-								<h1>Body of Christ United Global Internation Ministries Tv</h1>
+								<h1>BCU Media Network Tv</h1>
 								<button type="button" className="btn btn-warning">
 									Watch
 								</button>
 							</div>
 							<div className="hero_video">
-								<ReactPlayer
-									url={VIDEO_URL}
-									controls
-									playsinline
-									width="100%"
-									height="200px"
-								/>
+								{homeVideo.map((video) => {
+									return (
+										<ReactPlayer
+											key={video.id}
+											url={video.url}
+											controls
+											playsinline
+											width="100%"
+											height="200px"
+										/>
+									);
+								})}
 							</div>
 						</div>
 					</Col>
 				</Row>
+				<Row>{/* <NetflixSlider /> */}</Row>
 				<Row style={{ height: "500px" }}></Row>
 			</Container>
 		</section>

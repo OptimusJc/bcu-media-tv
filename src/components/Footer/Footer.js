@@ -8,7 +8,7 @@ const Footer = () => {
 			<Container fluid>
 				<div className="footer-content">
 					<div className="copyright">
-						<p>@copy 2022 - BCU Tv</p>
+						<p>&#169;2022 - BCU International Media Tv</p>
 					</div>
 					<div className="contact">
 						<a href="#" className="contact_us">

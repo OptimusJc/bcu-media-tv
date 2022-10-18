@@ -1,7 +1,7 @@
 import { Container, Navbar, Nav } from "react-bootstrap";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 
-import bcu_logo from "../../assets/bcu_tv_logo.png";
+import bcu_logo from "../../assets/bcu_logo_compressed.png";
 
 const Header = () => {
 	return (
