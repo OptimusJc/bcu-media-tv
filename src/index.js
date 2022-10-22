@@ -5,6 +5,7 @@ import "./index.scss";
 
 import App from "./App";
 import Home from "./containers/home/Home";
+import Admin from "./containers/admin/Admin";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,6 +14,7 @@ root.render(
 			{/* home route  */}
 			<Route path="/" element={<App />}>
 				<Route index element={<Home />} />
+				<Route path="/admin" element={<Admin />} />
 			</Route>
 		</Routes>
 	</Router>
