@@ -1,6 +1,6 @@
-import React from "react";
 import IconCross from "./../Icons/IconCross";
 import "./Content.scss";
+const URL = `https://image.tmdb.org/t/p/original`;
 
 const Content = ({ movie, onClose }) => (
 	<div className="content">
@@ -9,19 +9,14 @@ const Content = ({ movie, onClose }) => (
 			<div
 				className="content__background__image"
 				style={{
-					backgroundImage: `${movie.imageBg} ? url(${movie.imageBg} : "https://via.placeholder.com/100x160")`,
+					backgroundImage: `url(${URL}${movie.backdrop_path})`,
 				}}
 			/>
 		</div>
 		<div className="content__area">
 			<div className="content__area__container">
 				<div className="content__title">{movie.title}</div>
-				<div className="content__description">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-					et euismod ligula. Morbi mattis pretium eros, ut mollis leo tempus
-					eget. Sed in dui ac ipsum feugiat ultricies. Phasellus vestibulum enim
-					quis quam congue, non fringilla orci placerat. Praesent sollicitudin
-				</div>
+				<div className="content__description">{movie.overview}</div>
 			</div>
 			<button className="content__close" onClick={onClose}>
 				<IconCross />
