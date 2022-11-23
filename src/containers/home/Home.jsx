@@ -6,7 +6,7 @@ import ErrorBoundary from "../../components/error/ErrorBoundary";
 
 import useFirestore from "../../hooks/useFirestore";
 import useTmdb from "../../hooks/useTmdb";
-const api_key = "6767787c13565b7aaf79338b03e53116";
+import Requests from "../../utils/Requests";
 
 const Home = () => {
 	const holySpirit = useFirestore("videos/holySpirit/holySpirit_videos");
@@ -51,10 +51,7 @@ const Home = () => {
 	// 	},
 	// ];
 
-	const movieList = useTmdb(
-		`https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=en-US&page=1`
-	);
-	console.log(movieList.results);
+	const moviesList = useTmdb(Requests.fetchPopular);
 
 	return (
 		<section className="home">
@@ -91,7 +88,8 @@ const Home = () => {
 					<ErrorBoundary>
 						<Slider>
 							{/* TODO: use firebase cloud functions to create video thumbnails and then use the data to display the links here  */}
-							{movieList?.results?.map((movie) => {
+							{moviesList?.map((movie) => {
+								console.log(movie);
 								return <Slider.Item key={movie?.id} movie={movie} />;
 							})}
 						</Slider>

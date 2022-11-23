@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
+import axios from "../utils/Axios";
 
 const useTmdb = (url) => {
 	const [movieList, setMovieList] = useState([]);
 
 	useEffect(() => {
-		fetch(url)
-			.then((res) => res.json())
-			.then((movies) => setMovieList(movies))
-			.catch((err) => console.log(`Error on the useTMDB hook: ${err.message}`));
+		axios
+			.get(url)
+			.then((res) => {
+				setMovieList(res.data.results);
+			})
+			.catch((err) => console.log(err.message));
 	}, [url]);
 
 	return movieList;
