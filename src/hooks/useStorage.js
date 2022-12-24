@@ -3,7 +3,7 @@ import { fireStorage, fireStore } from "../firebase";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
-const useStorage = (file, description) => {
+const useStorage = (file, description, collectionName) => {
 	const [progress, setProgress] = useState(0);
 	const [error, setError] = useState(null);
 	const [url, setUrl] = useState(null);
@@ -11,10 +11,13 @@ const useStorage = (file, description) => {
 	useEffect(() => {
 		try {
 			// references
-			const storageRef = ref(fireStorage, `videos/holySpirit${file.name}`);
+			const storageRef = ref(
+				fireStorage,
+				`videos/${collectionName}${file.name}`
+			);
 			const collectionRef = collection(
 				fireStore,
-				`videos/holySpirit/holySpirit_collection`
+				`videos/${collectionName}/${collectionName}_collection`
 			);
 
 			const uploadTask = uploadBytesResumable(storageRef, file);
@@ -70,7 +73,7 @@ const useStorage = (file, description) => {
 		} catch (err) {
 			console.log(`Error from useStorage: ${err}`);
 		}
-	}, [file]);
+	}, [file, description]);
 
 	return { progress, url, error };
 };

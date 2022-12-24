@@ -2,14 +2,14 @@ import useStorage from "../../hooks/useStorage";
 import { useEffect } from "react";
 // import styles from "./progress.module.css";
 
-const Progress = ({ files, setFiles }) => {
-	const { url, progress } = useStorage(files);
+const Progress = ({ file, setFile, description, collectionName }) => {
+	const { url, progress } = useStorage(file, description, collectionName);
 
 	useEffect(() => {
 		if (url) {
-			setFiles(null);
+			setFile(null);
 		}
-	}, [url, setFiles]);
+	}, [url, setFile]);
 
 	return (
 		<div className="progress">
