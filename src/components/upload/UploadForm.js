@@ -5,21 +5,25 @@ import Form from "./form/Form";
 const UploadForm = () => {
 	const [file, setFile] = useState(null);
 	const [error, setError] = useState(null);
-	const [description, setDescription] = useState("");
 	const [selected, setSelected] = useState(null);
+	const [description, setDescription] = useState("");
 	const [collection, setCollection] = useState("");
 
 	return (
 		<div className="container">
 			<div className="row">
-				<div className="col" style={{ height: "500px", marginTop: "2rem" }}>
+				<div className="col">
 					<Form
-						setSelected={setSelected}
-						setError={setError}
-						setCollection={setCollection}
-						setFile={setFile}
-						setDescription={setDescription}
 						selected={selected}
+						setSelected={setSelected}
+						error={error}
+						setError={setError}
+						collection={collection}
+						setCollection={setCollection}
+						file={file}
+						setFile={setFile}
+						description={description}
+						setDescription={setDescription}
 					/>
 
 					{/* *output feedback */}
@@ -31,7 +35,11 @@ const UploadForm = () => {
 								file={file}
 								setFile={setFile}
 								description={description}
+								setDescription={setDescription}
 								collectionName={collection}
+								setCollection={setCollection}
+								selected={selected}
+								setSelected={setSelected}
 							/>
 						)}
 					</div>

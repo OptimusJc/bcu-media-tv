@@ -1,11 +1,15 @@
-import "./form.modules.scss";
+import { useEffect } from "react";
 
 const Form = ({
-	setSelected,
 	selected,
+	setSelected,
+	file,
 	setFile,
+	error,
 	setError,
+	collection,
 	setCollection,
+	description,
 	setDescription,
 }) => {
 	const onChangeHandler = (e) => {
@@ -37,6 +41,10 @@ const Form = ({
 		} else {
 			setFile(null);
 		}
+	};
+
+	const onDescripitionHandler = (e) => {
+		setDescription(e.target.value);
 	};
 
 	return (
@@ -77,7 +85,7 @@ const Form = ({
 
 			<textarea
 				placeholder="Enter description here"
-				onChange={(e) => setDescription(e.target.value)}
+				onChange={onDescripitionHandler}
 			></textarea>
 
 			<input

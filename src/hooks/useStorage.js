@@ -73,7 +73,7 @@ const useStorage = (file, description, collectionName) => {
 		} catch (err) {
 			console.log(`Error from useStorage: ${err}`);
 		}
-	}, [file, description]);
+	}, [file, description, collectionName]);
 
 	return { progress, url, error };
 };
